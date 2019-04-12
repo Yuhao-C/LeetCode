@@ -1,6 +1,4 @@
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Stack;
 
 /*
  * @lc app=leetcode id=13 lang=java

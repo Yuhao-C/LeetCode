@@ -1,5 +1,3 @@
-import java.util.LinkedList;
-
 /*
  * @lc app=leetcode id=27 lang=java
  *
