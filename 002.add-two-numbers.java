@@ -37,7 +37,28 @@
  */
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        
+        ListNode result = new ListNode(0);
+        ListNode current = result;
+        int lastPlus = 0;
+
+        while ((l1 != null || l2 != null) || lastPlus == 1) {
+            int l1Value = (l1 == null) ? 0 : l1.val;
+            int l2Value = (l2 == null) ? 0 : l2.val;
+            int sum = l1Value + l2Value + lastPlus;
+            if (sum >= 10) {
+                sum -= 10;
+                lastPlus = 1;
+            } else {
+                lastPlus = 0;
+            }
+            current.next = new ListNode(sum);
+            current = current.next;
+            if (l1 != null)
+                l1 = l1.next;
+            if (l2 != null)
+                l2 = l2.next;
+        }
+        return result.next;
     }
 }
 
