@@ -50,7 +50,20 @@
  */
 class Solution {
     public String countAndSay(int n) {
-        
+        StringBuilder lastSb = new StringBuilder(String.valueOf(1));
+        for (int i = 1; i < n; i++) {
+            StringBuilder thisSb = new StringBuilder();
+            thisSb.append(1).append(lastSb.charAt(0));
+            for (int j = 1; j < lastSb.length(); j++) {
+                char current = lastSb.charAt(j);
+                if (current == lastSb.charAt(j - 1)) {
+                    thisSb.setCharAt(thisSb.length() - 2, (char) ((int) thisSb.charAt(thisSb.length() - 2) + 1));
+                } else {
+                    thisSb.append(1).append(current);
+                }
+            }
+            lastSb = thisSb;
+        }
+        return lastSb.toString();
     }
 }
-
