@@ -1,7 +1,5 @@
 import java.util.LinkedList;
 
-import javax.swing.tree.TreeNode;
-
 /*
  * @lc app=leetcode id=100 lang=java
  *

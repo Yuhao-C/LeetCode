@@ -4,8 +4,6 @@
  * [70] Climbing Stairs
  */
 
-import java.util.ArrayList;
-
 class Solution {
     public int climbStairs(int n) {
         int a = 1, b = 1, c = 0;
